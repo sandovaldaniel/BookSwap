@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "808554742568",
+    "firebase_url": "https://prjbookswap-default-rtdb.firebaseio.com",
+    "project_id": "prjbookswap",
+    "storage_bucket": "prjbookswap.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808554742568:android:1667fe0a770d8ae303861d",
+        "android_client_info": {
+          "package_name": "com.example.finalprojectbook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlY_7logTOgrazevsvkLUbT2qEC4F52fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
