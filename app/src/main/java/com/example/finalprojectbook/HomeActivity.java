@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button btnAddBook, btnNewOperation, btnLogout;
+    Button btnAddBook, btnNewOperation, btnLogout, btnAllBooks, btnMyOperations, btnMyBooks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,19 +19,46 @@ public class HomeActivity extends AppCompatActivity {
         btnAddBook = findViewById(R.id.btnAddBook);
         btnNewOperation = findViewById(R.id.btnNewOperation);
         btnLogout = findViewById(R.id.btnLogout);
+        btnAllBooks = findViewById(R.id.btnAllBooks);
+        btnMyOperations = findViewById(R.id.btnMyOperations);
+        btnMyBooks = findViewById(R.id.btnMyBooks);
+
+
+        String userEmail = getIntent().getStringExtra("user_email");
 
         btnAddBook.setOnClickListener(view -> {
             Intent intent = new Intent(HomeActivity.this, NewBookActivity.class);
+            intent.putExtra("user_email", userEmail);
             startActivity(intent);
         });
 
         btnNewOperation.setOnClickListener(view -> {
             Intent intent = new Intent(HomeActivity.this, NewOperationActivity.class);
+            intent.putExtra("user_email", userEmail);
             startActivity(intent);
         });
 
+        btnAllBooks.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, ListBooksActivity.class);
+            startActivity(intent);
+        });
+
+        btnMyOperations.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, MyOperationsActivity.class);
+            intent.putExtra("user_email", userEmail);
+            startActivity(intent);
+        });
+
+        btnMyBooks.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, MyBooksActivity.class);
+            intent.putExtra("user_email", userEmail);
+            startActivity(intent);
+        });
+
+
+
         btnLogout.setOnClickListener(view -> {
-            finish(); // vuelve al login
+            finish(); // back to login
         });
     }
 }

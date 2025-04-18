@@ -30,10 +30,28 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp" />
 
+        <TextView
+            android:text="Select Genre"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <CheckBox
+            android:id="@+id/chkForBorrow"
+            android:text="Available for Borrow"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <CheckBox
             android:id="@+id/chkForSale"
             android:text="Available for Sale"
-            android:layout_marginTop="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
