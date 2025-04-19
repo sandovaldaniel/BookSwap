@@ -1,5 +1,6 @@
 package com.example.finalprojectbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,6 +30,14 @@ public class NewOperationActivity extends AppCompatActivity {
         spinnerType = findViewById(R.id.spinnerType);
         spinnerStatus = findViewById(R.id.spinnerStatus);
         btnSaveOperation = findViewById(R.id.btnSaveOperation);
+        Button btnBackHome = findViewById(R.id.btnBackHome);
+
+        btnBackHome.setOnClickListener(v -> {
+            Intent intent = new Intent(NewOperationActivity.this, HomeActivity.class);
+            startActivity(intent);
+        });
+
+
 
         // Llenar los Spinners con valores fijos
         String[] types = {"borrow", "sell", "return", "exchange"};
